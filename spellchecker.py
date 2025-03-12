@@ -8,6 +8,7 @@ class SpellChecker:
         pass
 
     def handleSentence(self, txtIn, language):
+
         pass
 
     def printMenu(self):
@@ -23,4 +24,8 @@ class SpellChecker:
 
 
 def replaceChars(text):
-    pass
+    chars = "\\`*_{}[]()>#+-.!$%^;,=_~"
+    for c in text:
+        if chars.contains(c):
+            text = text.replace(c, "")
+    return text
